@@ -38,8 +38,8 @@ flutter_vnptmap_gl:
 # example:
 flutter_vnptmap_gl:
   git:
-    url: https://scm.devops.vnpt.vn/gp2/vnpt-map/sdk-integration/mobile-sdk/flutter-sdk/flutter_vnptmap_gl
-    ref: 1.0.0
+    url: https://github.com/VNPTMaps/vnpt_maps_flutter
+    ref: 0.0.1
 
 ```
 Install dependencies
