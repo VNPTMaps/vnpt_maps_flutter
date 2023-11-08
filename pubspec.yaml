@@ -1,0 +1,43 @@
+name: flutter_vnptmap_gl
+description: A Flutter plugin for integrating VNPT Maps SDK in Android/iOS application.
+version: 0.0.1
+homepage: VnptMap
+
+
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  meta: ^1.3.0
+  collection: ^1.15.0
+
+  vnptmap_gl_platform_interface:
+    # for test and debug local development
+    # path: ./vnptmap_gl_platform_interface
+    git:
+      url: https://github.com/VNPTMaps/vnpt_maps_flutter
+      path: vnptmap_gl_platform_interface
+      ref: 0.0.1
+
+
+dependency_overrides:
+  vnptmap_gl_platform_interface:
+    path: ./vnptmap_gl_platform_interface
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.vnptmap.sdk.v2.flutter_vnptmap_gl
+        pluginClass: VNPTMapsPlugin
+      ios:
+        pluginClass: VNPTMapsPlugin

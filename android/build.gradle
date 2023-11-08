@@ -1,0 +1,64 @@
+group 'com.vnptmap.sdk.v2.flutter_vnptmap_gl'
+version '1.0'
+
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    dependencies {
+        implementation 'org.maplibre.gl:android-sdk:10.2.0'
+        implementation 'org.maplibre.gl:android-plugin-annotation-v9:2.0.0'
+        implementation 'org.maplibre.gl:android-plugin-offline-v9:2.0.0'
+        implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+        implementation 'org.maplibre.gl:android-sdk-geojson:5.9.0'
+        implementation 'org.maplibre.gl:android-sdk-turf:5.9.0'
+        implementation 'com.mapbox.mapboxsdk:mapbox-android-gestures:0.7.0'
+
+    }
+}
