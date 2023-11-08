@@ -388,7 +388,7 @@ Một đối tượng `CircleLayer` options và data được mô tả bên dư�
     this.draggable,
   });
   ```
-### Example [Circle](example/lib/place_circle.dart.dart)
+### Example [Circle](example/lib/place_circle.dart)
 
 ### Contributing & development
 🔥 This project originated as a fork from mapbox-gl-native prior to their switch to a non-OSS license. The fork also includes Maps SDK for iOS and MacOS (forked from mapbox-gl-native-ios) and Android SDK (forked from mapbox-gl-native-android). 
